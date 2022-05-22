@@ -1,0 +1,223 @@
+/*
+ * Theme XCL NEUMORPHIC
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+ * @license   BSD license
+ * @link      https://github.com/xoopscube-themes/xcl-neumorphic
+ */
+
+/* -------------------- -------------------- NOTIFICATION */
+
+
+/* __/!\__ Icon SVG background-image __/!\__
+   Encode custom color for svg fill/stroke property
+   e.g.: color : fill='%23face74'
+*/
+
+.msg-callout,
+
+.confirmInfo,
+.confirmError,
+.confirmMsg,
+.confirmOk,
+.errorMsg,
+.resultMsg {
+    background-image    : var(--color-5);
+    background-position : 1em 1em;
+    background-repeat   : no-repeat;
+    background-size     : 24px 24px;
+    border              : var(--border);
+    border-radius       : var(--border-radius);
+    /*color               : var(--color-5);*/
+    display             : block;
+    list-style          : none;
+    margin              : var(--space-6);
+    padding             : 1em 1em 1em 3em; /*1.5em 4em;*/
+}
+
+.resultMsg,
+.confirmInfo {
+	color :var(--blue-3);
+	border: 1px solid var(--blue-2);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M11 15h2v2h-2v-2m0-8h2v6h-2V7m1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8a8 8 0 0 1 8-8a8 8 0 0 1 8 8a8 8 0 0 1-8 8z' fill='%23face74'/%3E%3C/svg%3E");
+}
+.errorMsg,
+.confirmError {
+	color: #ff6633;
+	border: 1px solid #ff6633;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L1 21h22M12 6l7.53 13H4.47M11 10v4h2v-4m-2 6v2h2v-2' fill='%23face74'/%3E%3C/svg%3E");
+}
+.confirmMsg,
+.confirmOk {
+	color: var(--green); /*#00cc00;*/
+	border: 1px solid var(--green);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M9 20.42l-6.21-6.21l2.83-2.83L9 14.77l9.88-9.89l2.83 2.83L9 20.42z' fill='%23face74'/%3E%3C/svg%3E");
+}
+
+.msg-info {
+	display: block;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c-.5 0-1 .19-1.41.59l-8 8c-.79.78-.79 2.04 0 2.82l8 8c.78.79 2.04.79 2.82 0l8-8c.79-.78.79-2.04 0-2.82l-8-8C13 2.19 12.5 2 12 2m-1 5h2v6h-2V7m0 8h2v2h-2v-2z' fill='%23face74'/%3E%3C/svg%3E");
+}
+.msg-warning {
+	background: linear-gradient(145deg, hsla(348, 83%, 47%, 0.67), hsl(348, 83%, 47%));
+	box-shadow: inset 0 5px 10px 0 hsl(215, 15%, 21%), 1px 2px 3px hsl(215, 17%, 10%);
+	border:3px dotted hsl(348, 83%, 47%);
+	border-radius: 7px;
+	/*box-shadow: 1px 1px 10px 5px #111;*/
+	color: #fff;
+	list-style-type : none;
+	margin: 1em 0.25em;
+	padding: 1em;
+	text-align: center;
+}
+/* Update */
+.notification {
+    color           : var(  --white     );
+    display         : flex;
+    flex-basis      : 100%;
+    flex-direction  : row-reverse;
+    align-items     : center;
+    justify-content : center;
+    float           : none!important;
+}
+.notification {
+    /*padding: 15px;*/
+    /*margin-bottom: 20px;*/
+    /*border: 1px solid transparent;*/
+    /*position:relative;*/
+}
+
+.runtime {
+    background: var(--color-4);
+    border:1px dotted var(--color-6);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 4px var(--color-7), 0 10px -16px 1px var(--color-2);
+    color: var(--color-8);
+    padding: .25rem .5rem;
+    text-align: center;
+    bottom: 0;
+    width: 270px;
+
+    right: 1.5rem;
+    min-width: 240px;
+    z-index: 1009;
+    display: none;
+    margin-bottom:1rem;
+    position: fixed;
+}
+
+
+.sticky {
+    background      : var(  --green      );
+    border    : var(  --border   );
+    border-bottom   : 1px solid transparent !important;
+    box-shadow      : var(  --shadow-3     );
+    left            : unset;
+    margin          : 0 calc(   50% - 200px );
+    width           : 400px;
+    z-index         : 1000;
+}
+
+.ondemand {
+    background      : var(  --green      );
+    border    : var(  --border   ) !important;
+    box-shadow      : var(  --shadow-3     );
+    color           : var(  --white     );
+    height          : 50px;
+    left            : unset;
+    margin          : 0 calc(   50% - 200px );
+    width           : 400px;
+    z-index         : 2000;
+}
+
+.ondemand > div > a {
+    color           : var(  --amber    );
+}
+
+.sticky a, .floated a, .fixed a, .ondemand a {
+    float           : none;
+    margin          : 5px 10px 0 0;
+}
+
+.ondemand-button {
+    background      : var(  --color-4      );
+    border    : var(  --border   );
+    border-top-right-radius	: unset;
+    border-top-left-radius	: unset;
+    box-shadow      : var(  --shadow-3     );
+    float           : none!important;
+    height          : 24px;
+    left            : unset!important;
+    margin          : 0 50% !important;
+    padding         : 0 5px;
+    position        : absolute;
+    top             : 0;
+    width           : 32px !important;
+    z-index         : 1999;
+}
+
+.hide .ondemand-button {
+}
+
+/* -------------------- -------------------- UI Tooltip */
+.ui-tooltip,
+.arrow:after {
+    background          : black!important; /* override ui widget background */
+    /*border: 1px solid hsl(215, 15%, 35%);*/
+    border              : 1px solid #face74;
+    /*box-shadow: 0 -1px 0 #face74 inset;*/
+}
+.ui-tooltip {
+    padding             : 8px 20px;
+    color               : white;
+    border              : 1px solid #face74 !important; /* override ui widget background */
+    border-radius       : var(--border-radius);
+    font                : lighter 14px system, Sans-Serif;
+    /*text-transform: uppercase;*/
+    /*box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .8);*/
+    /*background-color: black;*/
+    /*box-shadow: 0 -1px 0 orange inset;*/
+    /*background:olivedrab;*/
+}
+.arrow {
+    width               : 44px;
+    height              : 16px;
+    overflow            : hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+.arrow.top {
+    top: -16px;
+    bottom: auto;
+    box-shadow: 0 -1px 0 green inset;
+    background:red;
+}
+.arrow.left {
+    left: 20%;
+    /*box-shadow: 0 -1px 0 deepskyblue inset;*/
+    /*background:deepskyblue;*/
+}
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px olivedrab;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /*box-shadow: 0 -1px 0 olivedrab inset;*/
+    /*background:olivedrab;*/
+}
+.arrow.top:after {
+    bottom: -20px;
+    top: auto;
+    box-shadow: 0 1px 0 red inset;
+    border: var(--border);
+    /*background:#face74;*/
+}

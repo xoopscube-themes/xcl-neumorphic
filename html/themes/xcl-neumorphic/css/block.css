@@ -1,0 +1,232 @@
+/*
+ * Theme XCL NEUMORPHIC
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+ * @license   BSD license
+ * @link      https://github.com/xoopscube-themes/xcl-neumorphic
+ */
+
+/* -------------------- -------------------- BLOCKS */
+
+/* ALL BLOCKS Parent Container */
+[class^="block-"]:not([class*="-title"]),
+[class^="block-"]:not([class*="-content"]) {
+    display: block;
+}
+
+/* All Blocks Title */
+[class^="block-title"] {
+    color           : var(--block-title-color);
+    font            : var(--block-title-font);
+    padding         : var(--block-title-padding);
+    margin          : 0
+}
+
+/* All Blocks Content */
+[class="block-content"] {
+    /*border              : var(--block-border);*/
+    border-radius   : var(--block-radius);
+    /*background          : var(--block-bg);*/
+    box-shadow      : var(--block-shadow);
+    display         : block;
+    padding         : var(--block-padding);
+    /*transition          : none;*/
+}
+
+/* Target single or multiple blocks by setting block [order/weight]
+   1. Dashboard > Block Management
+   2. Select a Block
+   3. Define a custom "Order/Weight"
+   eg. block title [Welcome] with block order [ 10 ]
+   Theme Smarty variable for the custom CSS class "b-<{$block.weight}>" */
+    [class^="block-"][class*="b-10"] > div[class*="-title"] {
+    /*background          : var(--block-bg);*/
+    }
+
+    [class^="block-"][class*="b-10"] > div[class*="-content"] {
+    background          : inherit;
+    }
+
+
+/* BLOCKS CUSTOM CSS */
+.block-left {
+    border          : var(--block-border);
+    display         : block;
+    border-radius   : var(--block-radius);
+    margin          : 0 0 1rem;
+}
+.block-left .block-title {
+    background      : var(--block-left-title-bg);
+    border          : var(--block-left-title-border);
+    color           : var(--block-left-title-color);
+    display         : flex;
+    font            : var(--block-left-title-font);
+    padding         : var(--block-left-title-padding);
+}
+
+
+.block-right {
+    display         : block;
+    margin          : 0 0 1rem;
+}
+.block-right .block-title {
+    background      : var(--block-right-title-bg);
+    border          : var(--block-right-title-border);
+    color           : var(--block-right-title-color);
+    display         : flex;
+    font            : var(--block-right-title-font);
+    padding         : var(--block-right-title-padding);
+}
+
+/* Wrap input with label to prevent wider than containing element */
+:is(div.block-login, div.block-search) label {
+    padding-right: .5rem;
+}
+:is(div.block-login, div.block-themes, div.block-search) input[type="text"],
+:is(div.block-login) input[type="password"] {
+    width           : 100%;
+}
+.block-themes {
+    text-align      : center;
+}
+.block-search {
+    padding-bottom  : var(--space-4);
+}
+
+/* -------------------- -------------------- BLOCKS MENU */
+/*.block-main-menu ul,*/
+/*.block-messages ul,*/
+/*.block-menu ul,*/
+/*.block-list ul,*/
+/*.block-subcategories ul,*/
+/*.block-tags ul,*/
+/*.block-user-menu ul,*/
+/*.block-waiting ul,*/
+div[class^="block-"] ul{
+    display             : block;
+    list-style-type     : none;
+    margin              : 0;
+    padding             : 0;
+}
+/* BLOCK TAGS scale */
+.block-tags ul {
+    margin              : 0;
+    padding             : var(--b-menu-padding);
+}
+/*.block-main-menu ul li,*/
+/*.block-messages ul li,*/
+/*.block-menu ul li,*/
+/*.block-list ul li,*/
+/*.block-subcategories ul li,*/
+/*.block-tags ul li,*/
+/*.block-user-menu ul li,*/
+/*.block-waiting ul li,*/
+div[class^="block-"] ul li {
+    margin-bottom       : var(--space-1);
+    text-decoration     : none;
+}
+/*.block-main-menu li a,*/
+/*.block-messages li a,*/
+/*.block-menu li a,*/
+/*.block-list li a,*/
+/*.block-subcategories li a,*/
+/*.block-user-menu li a,*/
+/*.block-waiting li a ,*/
+div[class^="block-"] li a {
+    background          : var(--b-menu-bg);
+    border              : var(--b-menu-border);
+    border-radius       : var(--b-menu-radius);
+    box-shadow          : var(--b-menu-shadow);
+    color               : var(--b-menu-color);
+    display             : block;
+    padding             : var(--b-menu-padding);
+    transition          : all var(--transition-time) var(--transition-cube);
+}
+/*.block-main-menu li a:hover,*/
+/*.block-messages li a:hover,*/
+/*.block-menu li a:hover,*/
+/*.block-subcategories li a:hover,*/
+/*.block-user-menu li a:hover,*/
+/*.block-waiting li a:hover,*/
+div[class^="block-"] li a:hover {
+    background          : var(--b-menu-bg-on);
+    border              : var(--b-menu-border-on);
+    border-radius       : var(--b-menu-radius-on);
+    box-shadow          : var(--b-menu-shadow-on);
+    color               : var(--b-menu-color-on);
+    display             : block;
+    padding             : var(--b-menu-padding);
+    /*transition          : all var(--transition-time) var(--transition-cube);*/
+    transition          : all 0.2s ease;
+}
+
+/* -------------------- -------------------- BLOCKS CENTER */
+/* ALL BLOCKS CENTER-LEFT, CENTER-CENTER, CENTER-RIGHT */
+
+[class^="block-center-"]:not([class*="-title"]),
+[class^="block-center-"]:not([class*="-content"]) {
+    background          : var(--block-center-bg);
+    border              : var(--block-center-border);
+    border-radius       : var(--block-center-radius);
+    box-shadow          : var(--block-center-shadow);
+    /*height              : 100%;*/
+    padding             : var(--block-center-padding);
+    transition          : var(--block-center-transition);
+}
+
+[class^="block-center-"] [class*="block-title"] {
+    color               : var(--block-center-title-color);
+    display             : flex;
+    font                : var(--block-center-title-font);
+    padding             : var(--block-center-title-padding);
+}
+
+[class^="block-center-"] [class*="-content"] {
+    box-shadow          : var(--block-center-shadow);
+    color               : var(--block-center-color);
+}
+
+[class^="block-center-"]:hover {
+    background          : var(--block-center-bg-on);
+    border              : var(--block-center-border-on);
+    box-shadow          : var(--block-center-shadow-on);
+    transition          : var(--block-center-transition);
+}
+
+
+
+/* -------------------- -------------------- BLOCK MAIN MENU */
+
+ul#main-menu {}
+ul#main-menu li {}
+ul#main-menu li a {}
+ul#main-menu li a.menu-sub {
+    white-space         : nowrap;
+    overflow            : hidden;
+    text-overflow       : ellipsis;
+    padding-left        : 2em;
+}
+
+ul#user-menu {}
+ul#user-menu li {}
+ul#user-menu li a {}
+
+/* -------------------- -------------------- BLOCK USER MENU */
+
+.user-menu-admin,
+.user-menu-comments,
+.user-menu-edit,
+.user-menu-email,
+.user-menu-logout,
+.user-menu-top {
+}
+
+.block-new-users {
+    font-size           : var(--font-16);
+}
+
+
+
+
+
