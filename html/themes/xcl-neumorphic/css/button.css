@@ -228,6 +228,7 @@ button {
     font-size           : var(--font-14);
     padding             : var(--button-padding);
     margin              : 0.25em;
+    transition          : var(--button-transition);
 }
 
 .ui-button-back,
@@ -363,6 +364,7 @@ input[type='button']:focus,
     box-shadow          : var(--button-shadow-on);
     outline             : none;
     text-decoration     : none;
+    transition          : var(--button-transition);
 }
 
 /*.ui-state-active, */

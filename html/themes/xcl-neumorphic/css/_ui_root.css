@@ -62,13 +62,13 @@
     /* -------------------- -------------------- COLOR-SCHEME */
     /* hue, saturation, lightness */
     --H: 219;
-    --S: 15%;
-    --L: 10%;
-    --color-1       : hsl(var(--H), var(--S), calc(var(--L) * 0.5) );
+    --S: 18%;
+    --L: 11%;
+    --color-1       : hsl(var(--H), var(--S), calc(var(--L) * 0.75) );
     --color-2       : hsl(var(--H), var(--S), calc(var(--L) * 1) );
     --color-3       : hsl(var(--H), var(--S), calc(var(--L) * 1.5) );
-    --color-4       : hsl(var(--H), var(--S), calc(var(--L) * 2) );
-    --color-5       : hsl(var(--H), var(--S), calc(var(--L) * 3) );
+    --color-4       : hsl(var(--H), var(--S), calc(var(--L) * 1.75) );
+    --color-5       : hsl(var(--H), var(--S), calc(var(--L) * 2) );
     --color-6       : hsl(var(--H), var(--S), calc(var(--L) * 4.5) );
     --color-7       : hsl(var(--H), var(--S), calc(var(--L) * 7) );
     --color-8       : hsl(var(--H), var(--S), calc(var(--L) * 8) );
@@ -111,7 +111,7 @@
 
     /* -------------------- -------------------- BODY */
 
-    --body-bg       : hsl(219, 17%, 16%);
+    --body-bg       : #222730;
     --body-color    : hsl(210, 25%, 73%);
     --body-font     : var( --font-family );
     --body-width    : 100%;
@@ -136,9 +136,10 @@
     --link-visited  : var(--color-9);
     --link-focus    : var(--amber);
 
-    --bg-linear     : linear-gradient(145deg, var(--color-3), var(--color-2) );
-    --bg-gradient   : linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));
-    --background-linear     : linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));
+    /*--bg-linear     : linear-gradient(145deg, var(--color-3), var(--color-2) );*/
+    --bg-gradient   : linear-gradient(145deg, hsl(219, 18%, 17%), hsl(219, 18%, 15%));
+    /*--bg-gradient   : linear-gradient(145deg, #222730, var(--color-4));*/
+    --bg-linear     : linear-gradient(145deg, hsl(219, 15%, 15%), hsl(219, 21%, 15%));
 
 
     /*	-------------------- -------------------- -------------------- CUSTOMIZE UI-WIDGET */
@@ -234,24 +235,63 @@
 
     --block-title-color         : var( --color-7);
     --block-title-font          : bold 20px var(--font-round);
-    --block-title-padding         : var( --space-2 );
+    --block-title-padding       : var( --space-2 );
 
-    --block-left-title-bg       : none;
-    --block-left-title-border   : none;
-    --block-left-title-color    : var(--color-6);
-    --block-left-title-font     : normal small-caps 700 var(--font-24 ) var(--font-round); /* shorthand font-style font-variant font-weight font-size/line-height font-family */
-    --block-left-title-padding  : var(--space-7) var(--space-2) var(--space-7) var(--space-6);
+    /* -------------------- -------------------- BLOCK LEFT */
 
-    --block-right-title-bg      : none;
-    --block-right-title-border  : none;
-    --block-right-title-color   : var(--color-6);
-    --block-right-title-font    : normal small-caps 700 var(--font-24 ) var(--font-round); /* shorthand font-style font-variant font-weight font-size/line-height font-family */
-    --block-right-title-padding : var(--space-7) var(--space-2) var(--space-7) var(--space-6);
+    --block-left-bg             : none;
+    --block-left-border         : none;
+    --block-left-color          : var(--color-6);
+    --block-left-font           : normal small-caps 700 var(--font-clamp ) var(--font-round); /* shorthand font-style font-variant font-weight font-size/line-height font-family */
+    --block-left-margin         : 0 0 var(--space-8);
+    --block-left-padding        : 0;
+    --block-left-radius         : none;
+    --block-left-shadow         : none;
+
+    --block-bl-title-bg         : none;
+    --block-bl-title-border     : none;
+    --block-bl-title-color      : var(--color-6);
+    --block-bl-title-font       : normal small-caps 700 var(--font-24 ) var(--font-round); /* shorthand font-style font-variant font-weight font-size/line-height font-family */
+    --block-bl-title-padding    : var(--space-7) var(--space-2) var(--space-7) var(--space-6);
+    --block-bl-title-shadow     : none;
+
+    --block-bl-content-bg       : transparent;
+    --block-bl-content-border   : none;
+    --block-bl-content-color    : inherit;
+    --block-bl-content-font     : inherit;
+    --block-bl-content-radius   : var( --border-radius );
+    --block-bl-content-padding  : var( --space-4 ); /* padding */
+    --block-bl-content-shadow   : var(--shadow-in);
+
+    /* -------------------- -------------------- BLOCK RIGHT */
+
+    --block-right-bg            : none;
+    --block-right-border        : none;
+    --block-right-color         : var(--color-6);
+    --block-right-font          : normal small-caps 700 var(--font-clamp ) var(--font-round); /* shorthand font-style font-variant font-weight font-size/line-height font-family */
+    --block-right-margin        : 0 0 var(--space-8);
+    --block-right-padding       : 0;
+    --block-right-radius        : none;
+    --block-right-shadow        : none;
+
+    --block-br-title-bg         : none;
+    --block-br-title-border     : none;
+    --block-br-title-color      : var(--color-6);
+    --block-br-title-font       : normal small-caps 700 var(--font-24 ) var(--font-round); /* shorthand font-style font-variant font-weight font-size/line-height font-family */
+    --block-br-title-padding    : var(--space-7) var(--space-2) var(--space-7) var(--space-6);
+
+    --block-br-content-bg       : transparent;
+    --block-br-content-border   : none;
+    --block-br-content-color    : inherit;
+    --block-br-content-font     : inherit;
+    --block-br-content-radius   : var( --border-radius );
+    --block-br-content-padding  : var( --space-4 ); /* padding */
+    --block-br-content-shadow   : none;
 
     /* -------------------- -------------------- BLOCK MENU [ul] [li] [a] */
 
     --b-menu-transition         : all var(--transition-time) var(--transition-cube);
-    --b-menu-bg                 : transparent; /* var( --color-2 ); */
+    --b-menu-bg                 : var(--bg-gradient); /*transparent;  var( --color-2 ); */
     --b-menu-border             : 1px solid hsl(218, 15%, 25%);
     --b-menu-color              : var( --font-size );
     --b-menu-image              : none;
@@ -266,20 +306,22 @@
     --b-menu-radius-on          : none;
     --b-menu-shadow-on          : var(--shadow-in);
 
-    /* -------------------- -------------------- BLOCK Footer */
+    /* -------------------- -------------------- BLOCK FULL WIDTH */
 
     /* SECTION FULL WIDTH > BLOCK FOOTER */
-    --block-full-bg             : var( --bg-linear );
+    --block-full-bg             : var( --color-2 );
     --block-full-border         : none;
     --block-full-padding        : var( --space-8 );
 
+    /* -------------------- -------------------- BLOCK CENTER */
     /* ALL BLOCKS CENTER */
     --block-center-bg           : transparent;
     --block-center-border       : none;
     --block-center-color        : inherit;
     --block-center-radius       : var( --border-radius );
-    --block-center-shadow       : none;
+
     --block-center-padding      : var( --space-6 ); /* padding */
+    --block-center-shadow       : none;
     --block-center-transition   : all 0.5s ease-out;
 
     --block-center-title-color  : var( --color-7);
@@ -296,10 +338,14 @@
     --breadcrumbs-border        : none; /* var( --border); */
     --breadcrumbs-margin        : 0 auto var(--space-7) 0; /* refer to div.content py-7 */
     --breadcrumbs-radius        : var(--border-radius);
-    --breadcrumbs-shadow        : var(--shadow-in ); /* 1px 2px 3px 1px hsl(0, 10%, 10%); */
+
     --breadcrumbs-padding       :  var(--space-1);/* .125em; */
+    --breadcrumbs-shadow        : var(--shadow-in ); /* 1px 2px 3px 1px hsl(0, 10%, 10%); */
+
     /* state action */
     --breadcrumbs-bg-on         : var(--bg-linear);
+
+    /* -------------------- -------------------- BREADCRUMBS LINK */
 
     --bc-link-bg                : var(--bg-gradient);
     --bc-link-border            : var(--border);
@@ -324,7 +370,7 @@
     --button-font               : 100 var(--font-16)/1.5 var(--font-family);
     --button-margin             : var(--input-margin);
     /*--button-shadow             : 0 0 3px 1px rgba(44, 98, 246, 0);*/
-    --button-shadow             : var(--shadow-out);
+    --button-shadow             : var(--shadow);
     --button-padding            : var(--space-3) var(--space-6); /* 0.25em 1em; */
     --button-radius             : var(--border-radius);
     --button-transition         : all var(--transition-time) var(--transition-cube);
@@ -333,7 +379,7 @@
     --button-border-on          : 1px solid var(--blue-1);
     --button-color-on           : var( --link );
     /*--button-shadow-on          : 0 0 4px 2px rgba(44, 93, 247, .85);*/
-    --button-shadow-on          : var(--shadow-out);
+    --button-shadow-on          : var(--shadow-in);
     /* state action */
     --button-bg-active          : var(--blue-1);
     --button-border-active      : 1px solid var(--blue-2);
@@ -419,6 +465,7 @@
 
     --header-bg                 : none;
     --header-color              : var(--color-5);
+    --header-slogan-color       : hsl(219, 15%, 28%);
     --header-font               : var(--font-round); /* font-family */
     --header-shadow             : -1px -1px 0 var(--color-6), 2px 2px 4px #000;
     --header-size               : var(--font-scale );
@@ -476,7 +523,7 @@
 
     /* -------------------- -------------------- SHADOW */
 
-    --shadow        : 5px 10px 15px #1a1e25, -5px -10px 20px #2c323d;
+    --shadow        : 4px 8px 12px #1a1e25, -4px -8px 12px #2c323d;
     /* Box-Shadow */
     --shadow-1      : 0 1px 0 rgba(0,0,0,0.10), 0 1px 0 rgba(0,0,0,0.10);
     --shadow-2      : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -485,11 +532,16 @@
     --shadow-5      : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     --shadow-6      : 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     --shadow-on     : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    --shadow-in2     :
+            inset 4px 4px 8px 4px hsl(0deg 0% 0% / 40%), 4px 4px 8px 4px hsl(219deg 14% 21%),
+    inset -4px -4px 8px 0 hsl(215deg 22% 24% / 40%),
+    inset -1px -2px 2px 0 hsl(219deg 14% 21% / 40%),
+    -8px -8px 8px 1px hsl(220deg 14% 21% / 50%);
 
-    --shadow-in     : inset 5px 5px 8px 1px hsla(0, 0%, 0%, 0.4), 5px 5px 10px 3px hsl(220, 14%, 21%),
-    inset -5px -5px 8px 0 hsla(200, 22%, 24%, 0.4),
-    inset -1px -2px 2px 0 hsla(220, 14%, 21%, 0.4),
-    -5px -5px 8px 3px hsla(220, 14%, 21%, 0.5);
+    --shadow-in     : inset 5px 5px 8px 1px hsla(0, 0%, 0%, 0.4), 5px 5px 10px 3px hsl(219, 14%, 21%),
+    inset -4px -4px 8px 0 hsla(215, 22%, 24%, 0.4),
+    inset -1px -2px 2px 0 hsla(219, 14%, 21%, 0.4),
+    -8px -8px 8px 1px hsla(220, 14%, 21%, 0.5);
     --shadow-out    : inset 0 5px 10px 0 hsl(215, 15%, 21%), 1px 2px 3px hsl(215, 17%, 10%);
 
     /* -------------------- -------------------- TAB */

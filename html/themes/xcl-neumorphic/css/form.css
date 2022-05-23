@@ -57,10 +57,10 @@ input[type='search'] {
 
 select {
     color           : #abc!important;
-    background      : var(--background-linear);
-    border          : var(--border);
+    background      : var(--input-bg);
+    border          : var(--input-border);
     border-radius   : var(--border-radius);
-    box-shadow      : var(--shadow-in);
+    box-shadow      : var(--input-shadow);
     font            : var(--input-font);
     padding         : var(--input-padding);
     margin          : var(--input-margin);
@@ -239,7 +239,7 @@ input[type="range"]::-moz-range-thumb {
         -webkit-appearance  : none;
         -moz-appearance     : none;
 
-        background          : var(--color-3);
+        background          : var(--input-bg);
         border              : var(--input-border);
 		border-radius       : 12px;
         box-shadow          : var(--input-shadow);

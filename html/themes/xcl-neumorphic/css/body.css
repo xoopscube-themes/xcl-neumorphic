@@ -24,6 +24,14 @@ body {
     overflow-x          : hidden;
     text-rendering      : optimizeLegibility;
 }
+body {
+    background-image    : conic-gradient(from 300deg at 16% 100px, hsla(215, 20%, 25%, 0.7), hsla(215, 20%, 15%, 0.5), hsla(215, 20%, 10%, 0.5)),
+    conic-gradient(from 45deg at 90% 100px, hsla(215, 20%, 8%, 0.8), hsla(215, 20%, 20%, 0.8), hsla(215, 20%, 25%, 0.8));
+}
+/* CKEditor */
+iframe[class^="cke"] html {
+    background-image: var(--body-bg);
+}
 
 *, *:before, *:after {
     box-sizing: inherit;

@@ -63,8 +63,8 @@
 .category-top {
     background          : none; /* var(--color-2); */
 
-    background          : hsla(210, 33%, 6%, 0.2);
-    background-image:linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));
+    background          : hsla(219, 20%, 14%, 0.4);
+    /*background-image:linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));*/
     border              : var(--border);
     border-radius       : var(--border-radius);
     padding             : var(--space-6);
@@ -123,10 +123,26 @@ ul.d3f_eachbranch {
     font-size: 14px;
     margin: .5em 0;
 }
-:is(section.top-category) :is(h4) {
-    background: var(--bg-linear);
+@keyframes slide-right {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
 
+:is(section.top-category) :is(h4) {
+    background: linear-gradient(to right, var(--color-4) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+:is(section.top-category) :is(h4):hover {
+    /*background: var(--bg-linear);*/
+    background-position: left bottom;
+    transition: all .5s ease-out;
+}
 
 /* Forum Activity */
 :is(footer.activity) :is(div) {
